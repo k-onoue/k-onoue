@@ -1,5 +1,15 @@
 ## Hi there 👋
 
+I am currently a master's course student of the Mathematical Informatics Laboratory at the Nara Institute of Science and Technology.
+
+### My interests
+- Bayesian optimization
+- Gaussian processes
+- Deep kernel machines
+- Functional analysis
+- Stochastic calculus
+- Constrained optimization
+
 <!--
 **k-onoue/k-onoue** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
