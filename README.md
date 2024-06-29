@@ -11,6 +11,11 @@ I am currently a master's course student of the Mathematical Informatics Laborat
 - Constrained optimization
 
 <!--
+[![言語の使用状況](https://img.shields.io/github/languages/top/k-onoue/k-onoue)](https://github.com/k-onoue/)
+-->
+
+
+<!--
 **k-onoue/k-onoue** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
 
 Here are some ideas to get you started:
