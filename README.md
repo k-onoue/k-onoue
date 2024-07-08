@@ -2,6 +2,8 @@
 
 I am currently a master's course student of the Mathematical Informatics Laboratory at the Nara Institute of Science and Technology.
 
+![GitHub Stats Card](https://github-readme-stats.vercel.app/api?username=zizi4n5)
+
 ### My interests
 - Bayesian optimization
 - Gaussian processes
