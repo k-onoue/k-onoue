@@ -11,7 +11,7 @@ I am currently a master's course student of the Mathematical Informatics Laborat
 
 
 
-### My interests
+## My interests
 - Bayesian optimization
 - Gaussian processes
 - Deep kernel machines
