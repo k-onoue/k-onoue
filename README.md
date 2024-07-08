@@ -9,7 +9,7 @@ I am currently a master's course student of the Mathematical Informatics Laborat
   <img align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=k-onoue" />
 </a>
 
-
+<br/>
 
 ## My interests
 - Bayesian optimization
