@@ -1,0 +1,41 @@
+.nav-container {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding: 1rem 0;
+    background-color: #1D1E20;
+}
+
+.nav-container .logo {
+    font-size: 1.5rem;
+    font-weight: bold;
+}
+
+.nav-container .nav {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 0 2rem;
+}
+
+.link {
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.5s ease-in-out;
+}
+
+.cta-btn {
+    background-color: #FFCC1A;
+    color: #1D1E20;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    display: inline-block;
+}
+
+.cta-btn:hover {
+    background-color: #DADADB;
+}
