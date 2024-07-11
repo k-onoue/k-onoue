@@ -2,11 +2,44 @@
     <img src='assets/profile.jpeg' class="profile-img" alt="Joe's personal headshot" />
     <div class="hero-text">
         <h1>Keisuke Onoue</h1>
-        <p>
-            He is currently a master's course student of the Mathematical Informatics Laboratory at NAIST. 
-        </p>
-        <p>
-            He would be a Standard Machine in your team for handling any issues.
+        <p id="typing-text-1">
+            Developing a Standard Machine for Black-Box Optimization
         </p>
     </div>
 </div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        function typeWriter(element, text, delay = 100) {
+            let i = 0;
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, delay);
+                } else {
+                    element.classList.remove('typing');
+                }
+            }
+            element.classList.add('typing');
+            type();
+        }
+
+        const typingText1 = document.getElementById('typing-text-1');
+        // const typingText2 = document.getElementById('typing-text-2');
+
+        // テキストを空にして、タイピングアニメーションを適用
+        const text1 = typingText1.textContent;
+        // const text2 = typingText2.textContent;
+        typingText1.textContent = '';
+        // typingText2.textContent = '';
+
+        // 1つ目のテキストをタイピングアニメーションで表示
+        typeWriter(typingText1, text1, 100);
+
+        // 1つ目が終わったら2つ目を表示
+        // setTimeout(() => {
+        //     typeWriter(typingText2, text2, 50);
+        // }, text1.length * 50 + 500); // 1つ目のアニメーションの時間 + 500msの遅延
+    });
+</script>
