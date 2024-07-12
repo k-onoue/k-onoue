@@ -6,37 +6,23 @@
     padding: 1rem; /* 上下左右にパディングを追加 */
 }
 
-.posts-container h2 {
-    font-size: 2rem;
-    font-weight: 600;
+.posts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     margin-bottom: 1rem;
     padding: 0 1rem;
 }
 
-.post-header {
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    width: 100%;
-    margin-bottom: 0.5rem;
-}
-
-.post-header h3 {
-    font-size: 1.5rem;
+.posts-container h2 {
+    font-size: 2rem;
     font-weight: 600;
-    margin: 0;
 }
-
-.post-header p {
-    font-size: 1rem;
-    margin: 0;
-}
-
 
 .posts-list {
     display: flex;
     flex-direction: column; /* カードを縦に並べる */
-    gap: 2rem;
+    gap: 1rem;
     padding: 0 1rem; /* 左右にパディングを追加 */
 }
 
@@ -56,10 +42,27 @@
     cursor: context-menu;
 }
 
-.post-card h3 {
+.post-card.hidden {
+    display: none; /* 隠す */
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.post-header h3 {
     font-size: 1.5rem;
     font-weight: 600;
-    margin-bottom: 0.5rem;
+    margin: 0;
+}
+
+.post-header p {
+    font-size: 1rem;
+    margin: 0;
 }
 
 .post-card p {
@@ -87,6 +90,24 @@ a.cta-text:hover {
     background-color: #DADADB;
 }
 
+.cta-btn {
+    background-color: #FFCC1A;
+    color: #000000;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    text-align: center;
+}
+
+.cta-btn:hover {
+    background-color: #DADADB;
+}
+
 /* レスポンシブスタイル */
 @media screen and (max-width: 768px) {
     .posts-container {
@@ -97,8 +118,12 @@ a.cta-text:hover {
         font-size: 1.8rem;
     }
 
-    .post-card h3 {
+    .post-header h3 {
         font-size: 1.4rem;
+    }
+
+    .post-header p {
+        font-size: 0.9rem;
     }
 
     .post-card p {

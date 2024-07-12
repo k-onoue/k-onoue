@@ -27,7 +27,7 @@
         </div>
         <div class="nav">
             <a href="/posts" class="link">
-                posts
+                Posts
             </a>
             <a href="https://docs.google.com/document/d/10ZosQ38Z3804KYPcb_aZp9bceoXK-q3GrkHjYshqIRE/edit?usp=sharing" class="cta-btn">Resume</a>
         </div>
@@ -164,10 +164,16 @@
             <i class="fa-brands fa-sass scss-icon"></i>
             <p>SCSS</p>
         </div>
+        <div class="skill-card scss">
+            <p>LaTeX</p>
+        </div>
     </div>
 </div>
 <div class="posts-container">
-    <h2>Posts</h2>
+    <div class="posts-header">
+        <h2>Posts</h2>
+        <a id="togglePosts" class="cta-text">Show More</a>
+    </div>
     <div class="posts-list">
         
             <div class="post-card">
@@ -186,7 +192,7 @@
                 <p>Helps you generates quotes from about 1600 quotes written by different authors . Quotes are automatically copied to your clipboards.</p>
             </div>
         
-            <div class="post-card">
+            <div class="post-card hidden">
                 <div class="post-header">
                     <h3><a href="/posts/password-generator/" class="cta-text">Password Generator</a></h3>
                     <p><small>Jul 10, 2024</small></p>
@@ -194,7 +200,7 @@
                 <p>Helps you generates random passwords, you can select what you want your password to entail and also you can copy generated password to clipboard.</p>
             </div>
         
-            <div class="post-card">
+            <div class="post-card hidden">
                 <div class="post-header">
                     <h3><a href="/posts/book-library-app/" class="cta-text">Book Library App</a></h3>
                     <p><small>Jul 12, 2024</small></p>
@@ -204,6 +210,26 @@
         
     </div>
 </div>
+
+<script>
+    document.getElementById('togglePosts').addEventListener('click', function() {
+        const hiddenPosts = document.querySelectorAll('.post-card.hidden');
+        const isHidden = hiddenPosts.length > 0;
+
+        if (isHidden) {
+            hiddenPosts.forEach(post => post.classList.remove('hidden'));
+            this.textContent = 'Show Less';
+        } else {
+            const allPosts = document.querySelectorAll('.post-card');
+            allPosts.forEach((post, index) => {
+                if (index >= 2) {
+                    post.classList.add('hidden');
+                }
+            });
+            this.textContent = 'Show More';
+        }
+    });
+</script>
 				
 			
 <div class="footer-wrapper">

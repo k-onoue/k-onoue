@@ -1,8 +1,12 @@
 <div class="posts-container">
-    <h2>Posts</h2>
+    <div class="posts-header">
+        <h2>Posts</h2>
+        <a id="togglePosts" class="cta-text">Show More</a>
+    </div>
     <div class="posts-list">
-        {% for post in collections.posts %}
-            <div class="post-card">
+        {% assign sortedPosts = collections.posts | sort: 'date', 'desc' %}
+        {% for post in sortedPosts %}
+            <div class="post-card{% if loop.index > 2 %} hidden{% endif %}">
                 <div class="post-header">
                     <h3><a href="{{post.url}}" class="cta-text">{{post.data.title}}</a></h3>
                     <p><small>{{ post.date | readableDate }}</small></p>
@@ -12,3 +16,23 @@
         {% endfor %}
     </div>
 </div>
+
+<script>
+    document.getElementById('togglePosts').addEventListener('click', function() {
+        const hiddenPosts = document.querySelectorAll('.post-card.hidden');
+        const isHidden = hiddenPosts.length > 0;
+
+        if (isHidden) {
+            hiddenPosts.forEach(post => post.classList.remove('hidden'));
+            this.textContent = 'Show Less';
+        } else {
+            const allPosts = document.querySelectorAll('.post-card');
+            allPosts.forEach((post, index) => {
+                if (index >= 2) {
+                    post.classList.add('hidden');
+                }
+            });
+            this.textContent = 'Show More';
+        }
+    });
+</script>
