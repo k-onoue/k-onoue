@@ -1,0 +1,14 @@
+<div class="posts-container">
+    <h2>Posts</h2>
+    <div class="posts-list">
+        {% for post in collections.posts %}
+            <div class="post-card">
+                <div class="post-header">
+                    <h3><a href="{{post.url}}" class="cta-text">{{post.data.title}}</a></h3>
+                    <p><small>{{ post.date | readableDate }}</small></p>
+                </div>
+                <p>{{post.data.description}}</p>
+            </div>
+        {% endfor %}
+    </div>
+</div>
