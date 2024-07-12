@@ -4,8 +4,7 @@
         <a id="togglePosts" class="cta-text">Show More</a>
     </div>
     <div class="posts-list">
-        {% assign sortedPosts = collections.posts | sort: 'date', 'desc' %}
-        {% for post in sortedPosts %}
+        {% for post in collections.posts | reverse %}
             <div class="post-card{% if loop.index > 2 %} hidden{% endif %}">
                 <div class="post-header">
                     <h3><a href="{{post.url}}" class="cta-text">{{post.data.title}}</a></h3>
