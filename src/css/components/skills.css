@@ -1,17 +1,23 @@
 .skills-container {
     padding: 6rem 0;
+    border-style: solid;
+    border-color: #000000;
+    margin: 10px 0 35px 0;
+    padding: 1rem; /* 上下左右にパディングを追加 */
 }
 
 .skills-container h2 {
     font-size: 2rem;
     font-weight: 600;
     margin-bottom: 1rem;
+    padding: 0 1rem;
 }
 
 .skills-container .grid-skills {
     display: grid;
     grid-template-columns: repeat(4, 1fr);
     gap: 2rem;
+    padding: 0 1rem; /* 左右にパディングを追加 */
 }
 
 @media screen and (max-width: 768px) {
@@ -28,8 +34,9 @@
     align-items: center;
     gap: 0 1rem;
     padding: 1rem;
-    border-radius: 10px;
-    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+    border-radius: 0px;
+    border: 1px solid #000000; /* 黒のボーダーを追加 */
+    box-shadow: none; /* シャドウを削除 */
     transition: all 0.5s ease-in-out;
     cursor: context-menu;
 }
@@ -37,27 +44,3 @@
 .skills-container .grid-skills i {
     font-size: 1.5rem;
 }
-/* 
-.skills-container .grid-skills .html:hover {
-    background-color: #E34F26;
-}
-
-.skills-container .grid-skills .css:hover {
-    background-color: #264DE4;
-}
-
-.skills-container .grid-skills .js:hover {
-    background-color: #F7DF1E;
-}
-
-.skills-container .grid-skills .react:hover {
-    background-color: #61DAFB;
-}
-
-.skills-container .grid-skills .node:hover {
-    background-color: #339933;
-}
-
-.skills-container .grid-skills .python:hover {
-    background-color: #3776AB;
-} */

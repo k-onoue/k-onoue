@@ -1,10 +1,12 @@
 .hero-container {
-    /* height: 45vh; */
     display: flex;
     justify-content: center;
     align-items: center;
     flex-direction: column;
-    padding: 2rem 0;
+    padding: 1rem 0;
+    border-style: solid;
+    border-color: #000000;
+    margin-top: 100px; /* ナビゲーションバーの高さに応じたマージンを設定 */
 }
 
 .hero-container .profile-img {
@@ -36,7 +38,7 @@
 .hero-container .hero-text p {
     font-size: 1.2rem;
     font-weight: 400;
-    margin-bottom: 1rem;
+    margin-bottom: 0.5rem;
 }
 
 .hero-container .social-icons {
