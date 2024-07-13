@@ -1,5 +1,8 @@
-<div class="skills-container">
-    <h2>Skills</h2>
+<div class="skills-projects-container">
+    <div class="skills-projects-header">
+        <h2>Skills & Projects</h2>
+        <a id="togglePosts" class="cta-text">Show More</a>
+    </div>
     <div class="grid-skills">
         <div class="skill-card python">
             <i class="fa-brands fa-python python-icon"></i>
@@ -25,8 +28,39 @@
             <i class="fa-brands fa-sass scss-icon"></i>
             <p>SCSS</p>
         </div>
-        <div class="skill-card scss">
+        <div class="skill-card latex">
             <p>LaTeX</p>
         </div>
     </div>
+    <div class="posts-list">
+        {% for post in collections.posts | reverse %}
+            <div class="post-card{% if loop.index > 2 %} hidden{% endif %}">
+                <div class="post-header">
+                    <h3><a href="{{post.url}}" class="cta-text">{{post.data.title}}</a></h3>
+                    <p><small>{{ post.date | readableDate }}</small></p>
+                </div>
+                <p>{{post.data.description}}</p>
+            </div>
+        {% endfor %}
+    </div>
 </div>
+
+<script>
+    document.getElementById('togglePosts').addEventListener('click', function() {
+        const hiddenPosts = document.querySelectorAll('.post-card.hidden');
+        const isHidden = hiddenPosts.length > 0;
+
+        if (isHidden) {
+            hiddenPosts.forEach(post => post.classList.remove('hidden'));
+            this.textContent = 'Show Less';
+        } else {
+            const allPosts = document.querySelectorAll('.post-card');
+            allPosts.forEach((post, index) => {
+                if (index >= 2) {
+                    post.classList.add('hidden');
+                }
+            });
+            this.textContent = 'Show More';
+        }
+    });
+</script>

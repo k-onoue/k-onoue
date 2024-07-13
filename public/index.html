@@ -137,8 +137,11 @@
         </div>
     </div>
 </div>
-<div class="skills-container">
-    <h2>Skills</h2>
+<div class="skills-projects-container">
+    <div class="skills-projects-header">
+        <h2>Skills & Projects</h2>
+        <a id="togglePosts" class="cta-text">Show More</a>
+    </div>
     <div class="grid-skills">
         <div class="skill-card python">
             <i class="fa-brands fa-python python-icon"></i>
@@ -164,11 +167,66 @@
             <i class="fa-brands fa-sass scss-icon"></i>
             <p>SCSS</p>
         </div>
-        <div class="skill-card scss">
+        <div class="skill-card latex">
             <p>LaTeX</p>
         </div>
     </div>
+    <div class="posts-list">
+        
+            <div class="post-card">
+                <div class="post-header">
+                    <h3><a href="/posts/book-library-app/" class="cta-text">Book Library App</a></h3>
+                    <p><small>Jul 12, 2024</small></p>
+                </div>
+                <p>A simple Book Library App built with JavaScript. It helps readers have a good list of books they are eiter currently reading or have finished reading.</p>
+            </div>
+        
+            <div class="post-card">
+                <div class="post-header">
+                    <h3><a href="/posts/password-generator/" class="cta-text">Password Generator</a></h3>
+                    <p><small>Jul 10, 2024</small></p>
+                </div>
+                <p>Helps you generates random passwords, you can select what you want your password to entail and also you can copy generated password to clipboard.</p>
+            </div>
+        
+            <div class="post-card hidden">
+                <div class="post-header">
+                    <h3><a href="/posts/quotes-generator/" class="cta-text">Quotes Generator</a></h3>
+                    <p><small>Jul 09, 2024</small></p>
+                </div>
+                <p>Helps you generates quotes from about 1600 quotes written by different authors . Quotes are automatically copied to your clipboards.</p>
+            </div>
+        
+            <div class="post-card hidden">
+                <div class="post-header">
+                    <h3><a href="/posts/todo-list-app/" class="cta-text">Todo List App</a></h3>
+                    <p><small>Jul 08, 2024</small></p>
+                </div>
+                <p>A simple Todo List App built with JavaScript. All datas are stored in localstorage. It helps users check list out their plans and tick as they do them.</p>
+            </div>
+        
+    </div>
 </div>
+
+<script>
+    document.getElementById('togglePosts').addEventListener('click', function() {
+        const hiddenPosts = document.querySelectorAll('.post-card.hidden');
+        const isHidden = hiddenPosts.length > 0;
+
+        if (isHidden) {
+            hiddenPosts.forEach(post => post.classList.remove('hidden'));
+            this.textContent = 'Show Less';
+        } else {
+            const allPosts = document.querySelectorAll('.post-card');
+            allPosts.forEach((post, index) => {
+                if (index >= 2) {
+                    post.classList.add('hidden');
+                }
+            });
+            this.textContent = 'Show More';
+        }
+    });
+</script>
 <div class="posts-container">
     <div class="posts-header">
         <h2>Posts</h2>
