@@ -9,6 +9,10 @@ module.exports = function (eleventyConfig) {
 		return collection.getFilteredByGlob('src/posts/*.md');
 	});
 
+	eleventyConfig.addCollection('projects', (collection) => {
+		return collection.getFilteredByGlob('src/projects/*.md');
+	});
+
 	eleventyConfig.addShortcode('year', () => {
 		return `${new Date().getFullYear()}`;
 	});
@@ -20,7 +24,7 @@ module.exports = function (eleventyConfig) {
 	return {
 		dir: {
 			input: 'src',
-			output: 'public',
+			output: 'docs',
 		},
 	};
 

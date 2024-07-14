@@ -1,7 +1,7 @@
 <div class="skills-projects-container">
     <div class="skills-projects-header">
         <h2>Skills & Projects</h2>
-        <a id="togglePosts" class="cta-text">Show More</a>
+        <a id="toggleProjects" class="cta-text">Show More</a>
     </div>
     <div class="grid-skills">
         <div class="skill-card python">
@@ -32,32 +32,32 @@
             <p>LaTeX</p>
         </div>
     </div>
-    <div class="posts-list">
-        {% for post in collections.posts | reverse %}
-            <div class="post-card{% if loop.index > 2 %} hidden{% endif %}">
-                <div class="post-header">
-                    <h3><a href="{{post.url}}" class="cta-text">{{post.data.title}}</a></h3>
-                    <p><small>{{ post.date | readableDate }}</small></p>
+    <div class="projects-list">
+        {% for project in collections.projects | reverse %}
+            <div class="project-card{% if loop.index > 2 %} hidden{% endif %}">
+                <div class="project-header">
+                    <h3><a href="{{project.url}}" class="cta-text">{{project.data.title}}</a></h3>
+                    <p><small>{{ project.date | readableDate }}</small></p>
                 </div>
-                <p>{{post.data.description}}</p>
+                <p>{{project.data.description}}</p>
             </div>
         {% endfor %}
     </div>
 </div>
 
 <script>
-    document.getElementById('togglePosts').addEventListener('click', function() {
-        const hiddenPosts = document.querySelectorAll('.post-card.hidden');
-        const isHidden = hiddenPosts.length > 0;
+    document.getElementById('toggleProjects').addEventListener('click', function() {
+        const hiddenProjects = document.querySelectorAll('.project-card.hidden');
+        const isHidden = hiddenProjects.length > 0;
 
         if (isHidden) {
-            hiddenPosts.forEach(post => post.classList.remove('hidden'));
+            hiddenProjects.forEach(project => project.classList.remove('hidden'));
             this.textContent = 'Show Less';
         } else {
-            const allPosts = document.querySelectorAll('.post-card');
-            allPosts.forEach((post, index) => {
+            const allProjects = document.querySelectorAll('.project-card');
+            allProjects.forEach((project, index) => {
                 if (index >= 2) {
-                    post.classList.add('hidden');
+                    project.classList.add('hidden');
                 }
             });
             this.textContent = 'Show More';
