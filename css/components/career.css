@@ -1,0 +1,112 @@
+.career-container {
+    margin: 10px 0;
+    padding: 1rem; /* 上下左右にパディングを追加 */
+    border-style: solid;
+    border-color: #000000;
+}
+
+.career-container h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+}
+
+.education-section {
+    margin-bottom: 2rem;
+    padding: 0 1rem;
+}
+
+.experience-section {
+    margin-bottom: 0rem;
+    padding: 0 1rem;
+}
+
+.education-section h3,
+.experience-section h3 {
+    font-size: 1.8rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.grid-education,
+.grid-experience {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr);
+    gap: 2rem;
+}
+
+@media screen and (max-width: 768px) {
+    .grid-education,
+    .grid-experience {
+        grid-template-columns: repeat(2, 1fr);
+    }
+}
+
+.education-item,
+.experience-item {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #1D1E20;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: left;
+    gap: 0.5rem;
+    padding: 1rem;
+    margin-bottom: 1rem; /* カード間のスペースを追加 */
+    border: 1px solid #000000; /* 黒のボーダーを追加 */
+    border-radius: 0px;
+    box-shadow: none; /* シャドウを削除 */
+    transition: all 0.5s ease-in-out;
+    cursor: default;
+}
+
+.education-item h4,
+.experience-item h4 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 0.5rem;
+}
+
+.education-item p,
+.experience-item p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+.experience-item ul {
+    list-style-type: disc;
+    padding-left: 1.5rem; /* リストのインデント */
+}
+
+.experience-item ul li {
+    margin-bottom: 0.5rem;
+    text-align: left; /* リスト項目を左揃え */
+}
+
+/* レスポンシブスタイル */
+@media screen and (max-width: 768px) {
+    .career-container {
+        padding: 1rem;
+    }
+
+    .career-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .education-section h3,
+    .experience-section h3 {
+        font-size: 1.6rem;
+    }
+
+    .education-item h4,
+    .experience-item h4 {
+        font-size: 1.4rem;
+    }
+
+    .education-item p,
+    .experience-item p,
+    .experience-item ul li {
+        font-size: 0.9rem;
+    }
+}

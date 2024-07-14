@@ -36,10 +36,10 @@
         {% for project in collections.projects | reverse %}
             <div class="project-card{% if loop.index > 2 %} hidden{% endif %}">
                 <div class="project-header">
-                    <h3><a href="{{project.url}}" class="cta-text">{{project.data.title}}</a></h3>
+                    <h3><a href="{{ site.pathPrefix }}{{ project.url }}" class="cta-text">{{ project.data.title }}</a></h3>
                     <p><small>{{ project.date | readableDate }}</small></p>
                 </div>
-                <p>{{project.data.description}}</p>
+                <p>{{ project.data.description }}</p>
             </div>
         {% endfor %}
     </div>

@@ -1,0 +1,74 @@
+.hero-container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    padding: 1rem 0 0 0;
+    border-style: solid;
+    border-color: #000000;
+    margin-top: 100px; /* ナビゲーションバーの高さに応じたマージンを設定 */
+}
+
+.hero-container .profile-img {
+    width: 200px;
+    height: 200px;
+    border-radius: 50%;
+    margin: 0 auto;
+    object-fit: cover;
+}
+
+.hero-container .hero-text {
+    text-align: center;
+    margin: 1rem 0;
+    width: 80%;
+}
+
+@media screen and (max-width: 768px) {
+    .hero-container .hero-text {
+        width: 100%;
+    }
+}
+
+.hero-container .hero-text h2 {
+    font-size: 2.2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.hero-container .hero-text p {
+    font-size: 1.2rem;
+    font-weight: 400;
+    margin-bottom: 0rem;
+}
+
+.hero-container .social-icons {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 0 1rem;
+}
+
+.hero-container .social-icons a {
+    color: #9B9C9D;
+    font-size: 1.5rem;
+    transition: all 0.5s ease-in-out;
+}
+
+.hero-container .social-icons a:hover {
+    color: #DADADB;
+}
+
+/* タイピングカーソルのスタイル */
+.typing::after {
+    content: '|';
+    animation: blink 0.7s infinite;
+}
+
+@keyframes blink {
+    0%, 100% {
+        opacity: 1;
+    }
+    50% {
+        opacity: 0;
+    }
+}

@@ -15,7 +15,7 @@ title: posts
                 </div>
                 <h3>{{post.data.title}}</h3>
                 <p>{{post.data.description}}</p>
-                <a href="{{post.url}}" class="cta-btn">Read more</a>
+                <a href="{{ site.pathPrefix }}{{post.url}}" class="cta-btn">Read more</a>
             </div>
         {% endfor %}
     </div>

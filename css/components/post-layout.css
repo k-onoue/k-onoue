@@ -1,0 +1,32 @@
+.post-layout {
+    padding: 5rem 0;
+}
+
+.post-layout h2 {
+    font-size: 2rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.post-layout h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin-bottom: 1rem;
+}
+
+.post-layout p {
+    font-size: 1rem;
+    font-weight: 400;
+    margin-bottom: 1rem;
+}
+
+.post-layout .banner-img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    padding: 20px 0;
+}
+
+.post-layout .pt-btn {
+    margin: 10px 0;
+}

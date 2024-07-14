@@ -1,0 +1,40 @@
+/* リセット */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+/* 基本のスタイル */
+body {
+    font-family: 'Space Mono', monospace;
+    font-size: 16px;
+    line-height: 1.5;
+    background-color: #6ba6b571;
+    /* background-color: #FFCC1A; */
+    background-color: #ffffff;
+    color: #000000;
+    width: 900px;
+    margin: 0 auto;
+    padding: 0;
+    margin-top: 60px; /* ナビゲーションバーの高さに応じて調整 */
+    padding-bottom: 60px;
+}
+
+@media screen and (max-width: 768px) {
+    body {
+        width: 100%;
+        padding: 0 2rem 60px;
+    }
+}
+
+/* リンクのスタイル */
+a {
+    text-decoration: none;
+    color: #DADADB;
+}
+
+/* リストのスタイル */
+li {
+    list-style: none;
+}

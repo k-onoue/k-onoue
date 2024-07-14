@@ -1,0 +1,132 @@
+.posts-container {
+    padding: 6rem 0;
+    border-style: solid;
+    border-color: #000000;
+    margin: 10px 0;
+    padding: 1rem; /* 上下左右にパディングを追加 */
+}
+
+.posts-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-bottom: 1rem;
+    padding: 0 1rem;
+}
+
+.posts-container h2 {
+    font-size: 2rem;
+    font-weight: 600;
+}
+
+.posts-list {
+    display: flex;
+    flex-direction: column; /* カードを縦に並べる */
+    gap: 1rem;
+    padding: 0 1rem; /* 左右にパディングを追加 */
+}
+
+.post-card {
+    background-color: rgba(255, 255, 255, 0.2);
+    color: #1D1E20;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    gap: 0.5rem;
+    padding: 1rem;
+    border-radius: 0px;
+    border: 1px solid #000000; /* 黒のボーダーを追加 */
+    box-shadow: none; /* シャドウを削除 */
+    transition: all 0.5s ease-in-out;
+    cursor: context-menu;
+}
+
+.post-card.hidden {
+    display: none; /* 隠す */
+}
+
+.post-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-bottom: 0.5rem;
+}
+
+.post-header h3 {
+    font-size: 1.5rem;
+    font-weight: 600;
+    margin: 0;
+}
+
+.post-header p {
+    font-size: 1rem;
+    margin: 0;
+}
+
+.post-card p {
+    font-size: 1rem;
+    margin-bottom: 0.5rem;
+}
+
+a.cta-text {
+    position: relative;
+    color: #1D1E20; /* リンクの色を指定 */
+    text-decoration: none;
+}
+
+a.cta-text::after {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 5px; /* 下線の太さを指定 */
+    background-color: #FFCC1A; /* 下線の色を指定 */
+    left: 0;
+    bottom: 0px; /* テキストの下に配置 */
+}
+
+a.cta-text:hover {
+    background-color: #DADADB;
+}
+
+.cta-btn {
+    background-color: #FFCC1A;
+    color: #000000;
+    padding: 0.5rem 1rem;
+    border-radius: 5px;
+    font-size: 1rem;
+    font-weight: 600;
+    text-decoration: none;
+    display: inline-block;
+    transition: all 0.5s ease-in-out;
+    cursor: pointer;
+    text-align: center;
+}
+
+.cta-btn:hover {
+    background-color: #DADADB;
+}
+
+/* レスポンシブスタイル */
+@media screen and (max-width: 768px) {
+    .posts-container {
+        padding: 1rem;
+    }
+
+    .posts-container h2 {
+        font-size: 1.8rem;
+    }
+
+    .post-header h3 {
+        font-size: 1.4rem;
+    }
+
+    .post-header p {
+        font-size: 0.9rem;
+    }
+
+    .post-card p {
+        font-size: 0.9rem;
+    }
+}
