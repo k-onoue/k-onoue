@@ -1,0 +1,315 @@
+<!DOCTYPE html>
+<html lang="en">
+	<head>
+		<meta charset="UTF-8" />
+		<meta http-equiv="X-UA-Compatible" content="IE=edge" />
+		<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+		<link rel="icon" href="/assets/favicon.jpeg" />
+		<link
+			rel="stylesheet"
+			href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.2.1/css/all.min.css"
+			integrity="sha512-MV7K8+y+gLIBoVD59lQIYicR65iaqukzvf/nwasF0nqhPay5w/9lJmVM2hMDcnK1OnMGCdVK+iQrJ7lzPJQd1w=="
+			crossorigin="anonymous"
+			referrerpolicy="no-referrer"
+		/>
+		<link href="https://fonts.googleapis.com/css2?family=Space+Mono&display=swap" rel="stylesheet">
+		<link rel="stylesheet" href="/css/global.css" />
+		<title>Keisuke Onoue</title>
+	</head>
+	<body>
+		<div>
+			<div class="nav-container-wrapper">
+    <div class="nav-container">
+        <div class="logo">
+            <a href="/">
+                Keisuke Onoue
+            </a>
+        </div>
+        <div class="nav">
+            <a href="/posts" class="link">
+                Posts
+            </a>
+            <a href="https://docs.google.com/document/d/1cO53jIaXZbCjYGXkUaxPqLSe4Lnzw_GitfkpFtqDkk4/edit?usp=sharing" class="cta-btn">Resume</a>
+        </div>
+    </div>
+</div>
+				 
+					
+<div class="hero-container">
+    <img src='assets/profile.jpeg' class="profile-img" alt="Joe's personal headshot" />
+    <div class="hero-text">
+        <h1>Keisuke Onoue</h1>
+        <p id="typing-text-1">
+            Developing a Standard Machine for Black-Box Optimization
+        </p>
+    </div>
+</div>
+
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        function typeWriter(element, text, delay = 100) {
+            let i = 0;
+            function type() {
+                if (i < text.length) {
+                    element.innerHTML += text.charAt(i);
+                    i++;
+                    setTimeout(type, delay);
+                } else {
+                    element.classList.remove('typing');
+                }
+            }
+            element.classList.add('typing');
+            type();
+        }
+
+        const typingText1 = document.getElementById('typing-text-1');
+        // const typingText2 = document.getElementById('typing-text-2');
+
+        // テキストを空にして、タイピングアニメーションを適用
+        const text1 = typingText1.textContent;
+        // const text2 = typingText2.textContent;
+        typingText1.textContent = '';
+        // typingText2.textContent = '';
+
+        // 1つ目のテキストをタイピングアニメーションで表示
+        typeWriter(typingText1, text1, 100);
+
+        // 1つ目が終わったら2つ目を表示
+        // setTimeout(() => {
+        //     typeWriter(typingText2, text2, 50);
+        // }, text1.length * 50 + 500); // 1つ目のアニメーションの時間 + 500msの遅延
+    });
+</script>
+<div class="about-container">
+    <h2>About Him</h2>
+    <div class="flex-about">
+        <div class="about-text">
+            <p>
+                He is currently a master’s course student at the Mathematical Informatics Laboratory at NAIST (Nara Institute of Science and Technology). He has a broad interest in various technologies, with a particular focus on mathematics and machine learning. His research area involves developing efficient Bayesian optimization algorithms from several aspects, with future publications forthcoming. Additionally, he is interested in reinforcement learning for smart sequential decision-making.
+            </p>
+            <p>
+                For more detailed information, please refer to his <a href="https://docs.google.com/document/d/1cO53jIaXZbCjYGXkUaxPqLSe4Lnzw_GitfkpFtqDkk4/edit?usp=sharing" class="cta-text">resume</a>.
+            </p>
+            <p>
+                In his free time, he enjoys taking walks and exploring delicious food. His favorite foods are refined white rice and Schwarzbrot.
+            </p>
+        </div>
+        <div class="about-img">
+            <Image src='/assets/about.jpeg' class="profile-img" alt="" />
+        </div>
+    </div>
+</div>
+<div class="career-container">
+    <h2>Career</h2>
+    <div class="education-section">
+        <h3>Education</h3>
+        <div class="education-item">
+            <h4>Nara Institute of Science and Technology</h4>
+            <p>Master's course student at the Mathematical Informatics Laboratory</p>
+            <p>2024 - Present</p>
+        </div>
+        <div class="education-item">
+                <h4>The Open University</h4>
+                <p>BSc Mathematics (Honours)</p>
+                <p>2020 - 2023</p>
+        </div>
+    </div>
+    <div class="experience-section">
+        <h3>Experience</h3>
+        <div class="experience-item">
+            <h4>Graduate School of Medicine, Kyoto University</h4>
+            <p>Research Assistant</p>
+            <ul>
+                <li>- Research on the construction of a framework for building and evaluating prediction models with logical constraints for the utilization of reliable machine learning models</li>
+                <li>- Research on constrained and discrete Bayesian optimization</li>
+            </ul>
+            <p>2023 - Present</p>
+        </div>
+        <div class="experience-item">
+            <h4>ScrumSign, Inc</h4>
+            <p>Data Scientist Intern and Part-time</p>
+            <ul>
+                <li>- Optimization of test thresholds to streamline medical examinations</li>
+                <li>- Assistant in managing a learning community for mathematics and machine learning theory</li>
+                <li>- Other responsibilities</li>
+            </ul>
+            <p>2022 - Present</p>
+        </div>
+    </div>
+</div>
+<div class="skills-projects-container">
+    <div class="skills-projects-header">
+        <h2>Skills & Projects</h2>
+        <a id="toggleProjects" class="cta-text">Show More</a>
+    </div>
+    <div class="grid-skills">
+        <div class="skill-card python">
+            <i class="fa-brands fa-python python-icon"></i>
+            <p>Python</p>
+        </div>
+        <div class="skill-card js">
+            <i class="fa-brands fa-js-square js-icon"></i>
+            <p>JavaScript</p>
+        </div>
+        <div class="skill-card vue">
+            <i class="fa-brands fa-vuejs vuejs-icon"></i>
+            <p>Vue</p>
+        </div>
+        <div class="skill-card html">
+            <i class="fa-brands fa-html5 html-icon"></i>
+            <p>HTML</p>
+        </div>
+        <div class="skill-card css">
+            <i class="fa-brands fa-css3-alt css-icon"></i>
+            <p>CSS</p>
+        </div>
+        <div class="skill-card scss">
+            <i class="fa-brands fa-sass scss-icon"></i>
+            <p>SCSS</p>
+        </div>
+        <div class="skill-card latex">
+            <p>LaTeX</p>
+        </div>
+    </div>
+    <div class="projects-list">
+        
+            <div class="project-card">
+                <div class="project-header">
+                    <h3><a href="/projects/book-library-app/" class="cta-text">Book Library App</a></h3>
+                    <p><small>Jul 12, 2024</small></p>
+                </div>
+                <p>A simple Book Library App built with JavaScript. It helps readers have a good list of books they are eiter currently reading or have finished reading.</p>
+            </div>
+        
+            <div class="project-card">
+                <div class="project-header">
+                    <h3><a href="/projects/password-generator/" class="cta-text">Password Generator</a></h3>
+                    <p><small>Jul 10, 2024</small></p>
+                </div>
+                <p>Helps you generates random passwords, you can select what you want your password to entail and also you can copy generated password to clipboard.</p>
+            </div>
+        
+            <div class="project-card hidden">
+                <div class="project-header">
+                    <h3><a href="/projects/quotes-generator/" class="cta-text">Quotes Generator</a></h3>
+                    <p><small>Jul 09, 2024</small></p>
+                </div>
+                <p>Helps you generates quotes from about 1600 quotes written by different authors . Quotes are automatically copied to your clipboards.</p>
+            </div>
+        
+            <div class="project-card hidden">
+                <div class="project-header">
+                    <h3><a href="/projects/todo-list-app/" class="cta-text">Todo List App</a></h3>
+                    <p><small>Jul 08, 2024</small></p>
+                </div>
+                <p>A simple Todo List App built with JavaScript. All datas are stored in localstorage. It helps users check list out their plans and tick as they do them.</p>
+            </div>
+        
+    </div>
+</div>
+
+<script>
+    document.getElementById('toggleProjects').addEventListener('click', function() {
+        const hiddenProjects = document.querySelectorAll('.project-card.hidden');
+        const isHidden = hiddenProjects.length > 0;
+
+        if (isHidden) {
+            hiddenProjects.forEach(project => project.classList.remove('hidden'));
+            this.textContent = 'Show Less';
+        } else {
+            const allProjects = document.querySelectorAll('.project-card');
+            allProjects.forEach((project, index) => {
+                if (index >= 2) {
+                    project.classList.add('hidden');
+                }
+            });
+            this.textContent = 'Show More';
+        }
+    });
+</script>
+
+<div class="posts-container">
+    <div class="posts-header">
+        <h2>Posts</h2>
+        <a id="togglePosts" class="cta-text">Show More</a>
+    </div>
+    <div class="posts-list">
+        
+            <div class="post-card">
+                <div class="post-header">
+                    <h3><a href="/posts/book-library-app/" class="cta-text">Book Library App</a></h3>
+                    <p><small>Jul 12, 2024</small></p>
+                </div>
+                <p>A simple Book Library App built with JavaScript. It helps readers have a good list of books they are eiter currently reading or have finished reading.</p>
+            </div>
+        
+            <div class="post-card">
+                <div class="post-header">
+                    <h3><a href="/posts/password-generator/" class="cta-text">Password Generator</a></h3>
+                    <p><small>Jul 10, 2024</small></p>
+                </div>
+                <p>Helps you generates random passwords, you can select what you want your password to entail and also you can copy generated password to clipboard.</p>
+            </div>
+        
+            <div class="post-card hidden">
+                <div class="post-header">
+                    <h3><a href="/posts/quotes-generator/" class="cta-text">Quotes Generator</a></h3>
+                    <p><small>Jul 09, 2024</small></p>
+                </div>
+                <p>Helps you generates quotes from about 1600 quotes written by different authors . Quotes are automatically copied to your clipboards.</p>
+            </div>
+        
+            <div class="post-card hidden">
+                <div class="post-header">
+                    <h3><a href="/posts/todo-list-app/" class="cta-text">Todo List App</a></h3>
+                    <p><small>Jul 08, 2024</small></p>
+                </div>
+                <p>A simple Todo List App built with JavaScript. All datas are stored in localstorage. It helps users check list out their plans and tick as they do them.</p>
+            </div>
+        
+    </div>
+</div>
+
+<script>
+    document.getElementById('togglePosts').addEventListener('click', function() {
+        const hiddenPosts = document.querySelectorAll('.post-card.hidden');
+        const isHidden = hiddenPosts.length > 0;
+
+        if (isHidden) {
+            hiddenPosts.forEach(post => post.classList.remove('hidden'));
+            this.textContent = 'Show Less';
+        } else {
+            const allPosts = document.querySelectorAll('.post-card');
+            allPosts.forEach((post, index) => {
+                if (index >= 2) {
+                    post.classList.add('hidden');
+                }
+            });
+            this.textContent = 'Show More';
+        }
+    });
+</script>
+				
+			
+<div class="footer-wrapper">
+    <div class="footer-container">
+        <p>&copy; 2024 Keisuke Onoue's Portfolio</p>
+        <div class="social_icons">
+            <a href="https://github.com/k-onoue" aria-label="GitHub" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-github"></i>
+            </a>
+            <a href="mailto:k.onoue0724@gmail.com" aria-label="Gmail" target="_blank" rel="noopener noreferrer">
+                <i class="fa-solid fa-envelope"></i>
+            </a>
+            <a href="https://x.com/lioiowefr" aria-label="Twitter" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-twitter"></i>
+            </a>
+            <a href="https://www.linkedin.com/" aria-label="LinkedIn" target="_blank" rel="noopener noreferrer">
+                <i class="fa-brands fa-linkedin"></i>
+            </a>
+        </div>
+    </div>
+</div>
+		</div>
+	</body>
+</html>

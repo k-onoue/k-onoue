@@ -26,6 +26,5 @@ module.exports = function (eleventyConfig) {
 			input: 'src',
 			output: 'docs',
 		},
-		pathPrefix: "/k-onoue/" // リポジトリ名に変更してください
 	};
 };
