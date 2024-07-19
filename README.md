@@ -1,5 +1,5 @@
 ## Hi there 👋
-
+<!--
 I am currently a master's course student of the Mathematical Informatics Laboratory at the Nara Institute of Science and Technology.
 
 ### My interests
@@ -17,7 +17,7 @@ I am currently a master's course student of the Mathematical Informatics Laborat
   <img align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=k-onoue&hide=jupyter%20notebook" />
 </a>
 
-
+-->
 
 
 <!--
