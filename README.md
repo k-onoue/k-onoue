@@ -1,24 +1,13 @@
 ## Hi there 👋
+
 <!--
-I am currently a master's course student of the Mathematical Informatics Laboratory at the Nara Institute of Science and Technology.
-
-### My interests
-- Bayesian optimization
-- Gaussian processes
-- Deep kernel machines
-- Functional analysis
-- Stochastic calculus
-- Constrained optimization
-
 <a href="https://github.com/anuraghazra/github-readme-stats">
   <img align="left" src="https://github-readme-stats.vercel.app/api?username=k-onoue&count_private=true&show_icons=true" />
 </a>
 <a href="https://github.com/anuraghazra/github-readme-stats">
   <img align="left" src="https://github-readme-stats.vercel.app/api/top-langs/?username=k-onoue&hide=jupyter%20notebook" />
 </a>
-
 -->
-
 
 <!--
 **k-onoue/k-onoue** is a ✨ _special_ ✨ repository because its `README.md` (this file) appears on your GitHub profile.
