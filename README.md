@@ -4,4 +4,4 @@ I love Julia.
 
 ## Website
 
-https://k-onoue/github.io
+https://k-onoue.github.io
