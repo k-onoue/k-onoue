@@ -1,10 +1,12 @@
-## About me
+## Interests
 
-I love Julia.
+Bayesian nonparametrics, Approximate Bayesian inference, Bayesian optimization, Tensor decomposition
 
 ## Website
 
 https://k-onoue.github.io
+
+## Skills
 
 ![](https://github-readme-stats.vercel.app/api/top-langs?username=k-onoue&show_icons=true&locale=en&layout=compact&hide=jupyter%20notebook)
 
