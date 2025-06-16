@@ -1,4 +1,10 @@
-## Hello World! 
+## About me
+
+I love Julia.
+
+## Website
+
+https://k-onoue.github.io
 
 
 <p align="left">
@@ -13,12 +19,3 @@
 
 
 
-
-
-## About me
-
-I love Julia.
-
-## Website
-
-https://k-onoue.github.io
