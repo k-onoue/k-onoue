@@ -2,7 +2,7 @@
 
 Bayesian nonparametrics, Approximate Bayesian inference, Bayesian optimization, Tensor decomposition
 
-# Skills
+## Skills
 ![](https://skillicons.dev/icons?i=julia,python)
 
 
