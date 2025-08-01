@@ -1,6 +1,6 @@
 ## Interests
 
-Bayesian nonparametrics, Approximate Bayesian inference, Bayesian optimization, Tensor decomposition
+Hierarchical Bayes
 
 <!--
 ## Skills
